@@ -1,9 +1,10 @@
-/*
-See LICENSE folder for this sample’s licensing information.
-
-Abstract:
-Contains the view controller for the Breakfast Finder.
-*/
+//
+//  ViewController.swift
+//  Recognizer
+//
+//  Created by Влад Купряков on 21.03.2020.
+//  Copyright © 2020 Apple. All rights reserved.
+//
 
 import UIKit
 import AVFoundation

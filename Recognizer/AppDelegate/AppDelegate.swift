@@ -1,9 +1,10 @@
-/*
-See LICENSE folder for this sample’s licensing information.
-
-Abstract:
-Contains the app delegate for the Breakfast Finder.
-*/
+//
+//  AppDelegate.swift
+//  Recognizer
+//
+//  Created by Влад Купряков on 20.03.2020.
+//  Copyright © 2020 Apple. All rights reserved.
+//
 
 import UIKit
 
@@ -13,7 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         return true
     }
 }

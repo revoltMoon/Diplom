@@ -25,20 +25,12 @@ enum ModelType {
 
 enum Result {
     
-    case captain
-    case iron
-    case spider
-    case thor
     case mercedes
     case audi
     case bmw
     
     var string: String {
         switch self {
-        case .captain: return "captain_america"
-        case .iron: return "iron_man"
-        case .spider: return "spider_man"
-        case .thor: return "thor"
         case .mercedes: return "mercedes"
         case .audi: return "audi"
         case .bmw: return "bmw"
@@ -179,15 +171,6 @@ final class RecognizerPresenter: IRecognizerPresenter {
         } else if result.identifier.contains("BWM") {
             return UIImage(named: "bwm.png")?.cgImage
         }
-//        if result.identifier == Result.captain.string {
-//            return UIImage(named: "captain.png")?.cgImage
-//        } else if result.identifier == Result.iron.string {
-//            return UIImage(named: "iron.png")?.cgImage
-//        } else if result.identifier == Result.spider.string {
-//            return UIImage(named: "spider.png")?.cgImage
-//        } else if result.identifier == Result.thor.string {
-//            return UIImage(named: "hammer.png")?.cgImage
-//        }
         return nil
     }
     

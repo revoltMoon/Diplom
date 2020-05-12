@@ -143,9 +143,7 @@ final class RecognizerViewController: ViewController, IRecognizerViewController 
         CATransaction.begin()
         CATransaction.setValue(kCFBooleanTrue, forKey: kCATransactionDisableActions)
         
-        // rotate the layer into screen orientation and scale and mirror
         detectionOverlay.setAffineTransform(CGAffineTransform(rotationAngle: CGFloat(.pi / 2.0)).scaledBy(x: scale, y: -scale))
-        // center the layer
         detectionOverlay.position = CGPoint (x: bounds.midX, y: bounds.midY)
         
         CATransaction.commit()
@@ -164,8 +162,7 @@ final class RecognizerViewController: ViewController, IRecognizerViewController 
         textLayer.shadowOpacity = 0.7
         textLayer.shadowOffset = CGSize(width: 2, height: 2)
         textLayer.foregroundColor = CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(), components: [0.0, 0.0, 0.0, 1.0])
-        textLayer.contentsScale = 2.0 // retina rendering
-        // rotate the layer into screen orientation and scale and mirror
+        textLayer.contentsScale = 2.0
         textLayer.setAffineTransform(CGAffineTransform(rotationAngle: CGFloat(.pi / 2.0)).scaledBy(x: 1.0, y: -1.0))
         return textLayer
     }
@@ -175,12 +172,10 @@ final class RecognizerViewController: ViewController, IRecognizerViewController 
         shapeLayer.bounds = bounds
         shapeLayer.position = CGPoint(x: bounds.midX, y: bounds.midY)
         shapeLayer.name = "Found Object"
-//        shapeLayer.backgroundColor = CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(), components: [1.0, 1.0, 0.2, 0.4])
         shapeLayer.borderWidth = 2
         if #available(iOS 13.0, *) {
             shapeLayer.borderColor = CGColor(srgbRed: 0, green: 0.5, blue: 0.5, alpha: 0.8)
         } else {
-            // Fallback on earlier versions
         }
         shapeLayer.cornerRadius = 7
         return shapeLayer
@@ -191,17 +186,16 @@ final class RecognizerViewController: ViewController, IRecognizerViewController 
     }
     
     private func setupButton() {
-                button.backgroundColor = UIColor.white.withAlphaComponent(0.5)
-        //        button.frame = CGRect(x: view.center.x - 25, y: view.center.y - 25, width: 50, height: 50)
-                button.addTarget(self, action: #selector(didTapChangeModelTypeButton), for: .touchUpInside)
-                view.addSubview(button)
-                button.translatesAutoresizingMaskIntoConstraints = false
-                button.layer.cornerRadius = 12
-                button.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-                button.widthAnchor.constraint(equalToConstant: 200).isActive = true
-                button.heightAnchor.constraint(equalToConstant: 50).isActive = true
-                button.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -30).isActive = true
-            
-                rootLayer.addSublayer(button.layer)
+        button.backgroundColor = UIColor.white.withAlphaComponent(0.5)
+        button.addTarget(self, action: #selector(didTapChangeModelTypeButton), for: .touchUpInside)
+        view.addSubview(button)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.layer.cornerRadius = 12
+        button.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        button.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        button.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -30).isActive = true
+        
+        rootLayer.addSublayer(button.layer)
     }
 }
