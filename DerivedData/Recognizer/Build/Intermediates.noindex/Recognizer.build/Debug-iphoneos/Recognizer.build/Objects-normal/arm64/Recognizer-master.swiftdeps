@@ -1,0 +1,8 @@
+version: "Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)"
+options: "be2692cbc9f653d2821e2e62ac9ccaa1"
+build_time: [1589300063, 100091000]
+inputs:
+  "/Users/kupryakov/Documents/Develop/Diplom/Recognizer/Recognizer/RecognizerPresenter.swift": [1589299700, 510823245]
+  "/Users/kupryakov/Documents/Develop/Diplom/Recognizer/Recognizer/RecognizerViewController.swift": [1589299700, 410019301]
+  "/Users/kupryakov/Documents/Develop/Diplom/Recognizer/Recognizer/ViewController.swift": [1589299700, 527618835]
+  "/Users/kupryakov/Documents/Develop/Diplom/Recognizer/Recognizer/AppDelegate/AppDelegate.swift": [1589299700, 495982493]
