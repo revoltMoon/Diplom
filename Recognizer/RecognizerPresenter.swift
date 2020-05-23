@@ -11,6 +11,10 @@ import Vision
 import UIKit
 import AVFoundation
 
+private extension String {
+    static let alertSound = "alert"
+}
+
 enum ModelType {
     case objectDetector
     case imageClassification
@@ -53,6 +57,7 @@ final class RecognizerPresenter: IRecognizerPresenter {
     private var imageClassificationRequests: [VNRequest] = []
     private var objectDetectionRequests: [VNRequest] = []
     weak var view: IRecognizerViewController?
+    private var player: AVAudioPlayer?
     
     // MARK: - IPresenter
     
@@ -151,6 +156,7 @@ final class RecognizerPresenter: IRecognizerPresenter {
             guard let objectObservation = observation as? VNRecognizedObjectObservation else {
                 continue
             }
+            playSound(soundName: .alertSound)
             let topResult = objectObservation.labels[0]
             let objectBounds = VNImageRectForNormalizedRect(objectObservation.boundingBox,
                                                             Int(bufferSize.width),
@@ -191,5 +197,24 @@ final class RecognizerPresenter: IRecognizerPresenter {
             exifOrientation = .up
         }
         return exifOrientation
+    }
+    
+    private func playSound(soundName: String) {
+        guard let url = Bundle.main.url(forResource: soundName, withExtension: "mp3") else { return }
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+            guard let player = player else { return }
+            player.play()
+            
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    
+    private func stopSound() {
+        guard let player = player else { return }
+        player.stop()
     }
 }

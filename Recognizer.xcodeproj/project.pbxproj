@@ -15,6 +15,7 @@
 		5AD2674B242B5A8D005EF571 /* cars.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5AD2674A242B5A8D005EF571 /* cars.mlmodel */; };
 		5AD2674E242B7F62005EF571 /* cars1000.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5AD2674C242B7F61005EF571 /* cars1000.mlmodel */; };
 		5AD2674F242B7F62005EF571 /* cars500.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5AD2674D242B7F62005EF571 /* cars500.mlmodel */; };
+		5AE9124C2478FC0100094E32 /* alert.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5AE9124B2478FC0100094E32 /* alert.mp3 */; };
 		5AF50AC62430813B0038A2BD /* ppl2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5AF50AC52430813B0038A2BD /* ppl2.mlmodel */; };
 		5AF50AC8243082700038A2BD /* ppl6000.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5AF50AC7243082700038A2BD /* ppl6000.mlmodel */; };
 		FA68723920AA028000D82F25 /* ObjectDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FA68723820AA028000D82F25 /* ObjectDetector.mlmodel */; };
@@ -35,6 +36,7 @@
 		5AD2674A242B5A8D005EF571 /* cars.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = cars.mlmodel; sourceTree = "<group>"; };
 		5AD2674C242B7F61005EF571 /* cars1000.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = cars1000.mlmodel; sourceTree = "<group>"; };
 		5AD2674D242B7F62005EF571 /* cars500.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = cars500.mlmodel; sourceTree = "<group>"; };
+		5AE9124B2478FC0100094E32 /* alert.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alert.mp3; sourceTree = "<group>"; };
 		5AF50AC52430813B0038A2BD /* ppl2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ppl2.mlmodel; sourceTree = "<group>"; };
 		5AF50AC7243082700038A2BD /* ppl6000.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ppl6000.mlmodel; sourceTree = "<group>"; };
 		FA68723820AA028000D82F25 /* ObjectDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ObjectDetector.mlmodel; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 		5AAEF8EC242751D200D0C959 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5AE9124B2478FC0100094E32 /* alert.mp3 */,
 				FAD500A51ED668B60074D713 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -194,6 +197,7 @@
 				FAD500A91ED668B60074D713 /* LaunchScreen.storyboard in Resources */,
 				FAD500A61ED668B60074D713 /* Assets.xcassets in Resources */,
 				FAD500A41ED668B60074D713 /* Main.storyboard in Resources */,
+				5AE9124C2478FC0100094E32 /* alert.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
