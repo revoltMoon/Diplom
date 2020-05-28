@@ -1,0 +1,9 @@
+import turicreate as tc
+
+data = tc.SFrame('ig02.sframe')
+train_peopleData, test_peopleData = data.random_split(0.8)
+model = tc.object_detector.create(train_peopleData)
+predictions = model.predict(test_data)
+metrics = model.evaluate(test_data)
+model.save('ppl.model')
+model.export_coreml('ppl.mlmodel')
